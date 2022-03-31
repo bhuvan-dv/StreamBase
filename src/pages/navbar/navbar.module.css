@@ -1,0 +1,102 @@
+:root {
+  --nav-background-color: #403a3ab8;
+  --navColor: #ffc107;
+  --navHeight: 70px;
+  --navwidth: 100%;
+  --navDisplay: flex;
+  --homeHeaderBackground: transparent;
+}
+#navbarBlock {
+  color: orange;
+  height: var(--navHeight);
+  width: var(--navwidth);
+  background-color: var(--nav-background-color);
+}
+.homeClass {
+  position: absolute;
+  z-index: 1;
+  background-color: var(--homeHeaderBackground) !important;
+}
+.navArticle {
+  width: 85%;
+  height: var(--navHeight);
+  display: var(--navDisplay);
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoBlockAnchor {
+  justify-content: center;
+  display: flex;
+  color: var(--navColor);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-size: 1.3em;
+  align-items: center;
+}
+.logoBlockSpanIcon {
+  color: var(--navColor);
+  padding: 0;
+  font-size: 33px;
+  margin: 0px 12px 0 0;
+}
+.menu > ul{
+   list-style: none;
+  display: flex;
+  align-items: center;
+}
+.navbarAnchor {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.navbarIconLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+.navbarIcon {
+  margin: 1px 8px 0 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 100%;
+}
+.dropDown{
+  position:absolute;
+  background: #111111cc;
+  width:268px;
+  min-height: 250px;
+  border-radius: 3px;
+  border-bottom: 3px solid #ffc107;
+  padding:20px;
+  display: none;
+}
+.dropDown > ul{
+  list-style: none;
+}
+.dropDown > ul > li > a{
+  text-decoration: none;
+  padding:10px 0px;
+  text-transform: capitalize;
+  color:#fff;
+  width:100%;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+.dropDown> ul li a svg{
+background-color: #ffc107;
+color:#111;
+padding:0px 6px;
+margin:6px 9px 0 0;
+border-radius: 5px;
+font-size: 16px;
+height:20px;
+width:24px;
+}
