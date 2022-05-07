@@ -9,12 +9,7 @@ import { getStorage } from "firebase/storage";
 //database for forms and movie details
 import { getDatabase } from "firebase/database";
 const firebaseConfig = {
-  apiKey: "AIzaSyBZ4x8H1YwWVQkxLRrtyq9Ds4fsSd-l9rI",
-  authDomain: "streambase-36423.firebaseapp.com",
-  projectId: "streambase-36423",
-  storageBucket: "streambase-36423.appspot.com",
-  messagingSenderId: "933305670020",
-  appId: "1:933305670020:web:21ed5a8aa225ffbfffe5d1",
+ 
 };
 
 // Initialize Firebase
