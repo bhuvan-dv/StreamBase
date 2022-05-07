@@ -40,3 +40,14 @@
   margin: 16px 0;
   border-radius: 8px;
 }
+.videoDesc a{
+  display: inline-block;
+  background-color: #ffc107;
+  text-decoration: none;
+  padding:5px;
+  width: 30%;
+  text-align: center;
+  border-radius: 8px;
+  color:#fff;
+      text-shadow: 2px 2px #111;
+}

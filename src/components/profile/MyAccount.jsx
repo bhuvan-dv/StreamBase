@@ -13,7 +13,7 @@ const MyAccount = () => {
       <>
         <div className={Styles.photoURL}>
           <aside className={Styles.asideIcon}>
-            <Link to="/myprofile/upload-photo">
+            <Link to="/user/upload-photo">
               <figure>
                 <img
                   src={photoURL}

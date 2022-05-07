@@ -6,6 +6,8 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 ///FOR STORAGE
 import { getStorage } from "firebase/storage";
+//database for forms and movie details
+import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyBZ4x8H1YwWVQkxLRrtyq9Ds4fsSd-l9rI",
   authDomain: "streambase-36423.firebaseapp.com",
@@ -19,4 +21,5 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 export let auth = getAuth(firebase);
 export let storage = getStorage(firebase);
+export let database = getDatabase(firebase);
 export default firebase;

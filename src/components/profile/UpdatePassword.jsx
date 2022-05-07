@@ -23,7 +23,7 @@ const UpdatePassword = () => {
       setLoading(true);
       await updatePassword(USER, password);
       toast.success("successfulyy password updated");
-      navigate("/myprofile");
+      navigate("/user");
     } catch (error) {
       toast.error(error.message);
     }
@@ -36,23 +36,7 @@ const UpdatePassword = () => {
         <h2 style={{ padding: "20px 0" }}>Update Password</h2>
         <div className={Styles.formBlock}>
           <form onSubmit={handleSubmit}>
-            {/* <div className="form-group">
-              <label htmlFor="email" className={Styles.formLabel}>
-                Update Password
-              </label>
-              <input
-                type="password"
-                id="email"
-                name="email"
-                required
-                value={password}
-                placeholder="enter email"
-                onChange={e => {
-                  setPassword(e.target.value);
-                }}
-                className={Styles.formControl}
-              />
-            </div> */}
+            
             <div className="form-group">
               <label htmlFor="password" className={Styles.formLabel}>
                 new Password
@@ -94,7 +78,7 @@ const UpdatePassword = () => {
                   textTransform: "capitalize",
                 }}
               >
-                <Link to="/myprofile" className={Styles.gotoAuthLink}>
+                <Link to="/user" className={Styles.gotoAuthLink}>
                   go back to my profile
                 </Link>
               </p>

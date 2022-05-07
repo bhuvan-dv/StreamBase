@@ -147,7 +147,7 @@ const UploadProfilePhoto = () => {
             <div className="form-control">
               <p className={Styles.gotoAuth}>
                 Photo Uploaded already?{""}
-                <Link to="/myprofile" className={Styles.gotoAuthLink}>
+                <Link to="/user" className={Styles.gotoAuthLink}>
                   Profile
                 </Link>
               </p>

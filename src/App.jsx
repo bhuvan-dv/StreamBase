@@ -5,18 +5,21 @@ import StreamBaseRoutes from "./routes/StreamBaseRoutes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AuthProvider from "./api/AuthContext";
+import MovieProvider from "./api/MovieContext";
 const App = () => {
   return (
     <AuthProvider>
-      <Router>
-        <header>
-          <Navbar />
-        </header>
-        <main>
-          <ToastContainer pauseOnHover />
-          <StreamBaseRoutes />
-        </main>
-      </Router>
+      <MovieProvider>
+        <Router>
+          <header>
+            <Navbar />
+          </header>
+          <main>
+            <ToastContainer pauseOnHover />
+            <StreamBaseRoutes />
+          </main>
+        </Router>
+      </MovieProvider>
     </AuthProvider>
   );
 };

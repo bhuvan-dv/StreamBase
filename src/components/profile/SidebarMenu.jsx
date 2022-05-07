@@ -5,7 +5,6 @@ import Styles from "./profile.module.css";
 import { TiUserDelete } from "react-icons/ti";
 import { deleteUser } from "firebase/auth";
 import { AuthContext } from "../../api/AuthContext";
-import { async } from "@firebase/util";
 const SidebarMenu = () => {
   let USER = useContext(AuthContext);
   let removeAcc = async () => {
@@ -20,7 +19,21 @@ const SidebarMenu = () => {
     <div className={Styles.SidebarMenu}>
       <ul>
         <li>
-          <Link to="/myprofile/my-account">
+          <Link
+            to="/user"
+            style={{
+              color: "#fff",
+              fontWeight: "bold",
+              textTransform: "uppercase",
+              borderBottom: "3px solid #ffc107",
+              background: "#333",
+            }}
+          >
+            Account Setting
+          </Link>
+        </li>
+        <li>
+          <Link to="/user/my-account">
             <span>
               <MdOutlineAccountCircle />
             </span>
@@ -28,7 +41,7 @@ const SidebarMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/myprofile/upload-photo">
+          <Link to="/user/upload-photo">
             <span>
               <MdUploadFile />
             </span>
@@ -36,7 +49,7 @@ const SidebarMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/myprofile/update-password">
+          <Link to="/user/update-password">
             <span>
               <MdUploadFile />
             </span>
@@ -44,7 +57,7 @@ const SidebarMenu = () => {
           </Link>
         </li>
         <li
-          className="lastChild"
+          className={Styles.lastChild}
           onClick={removeAcc}
           style={{ cursor: "pointer" }}
         >
@@ -54,6 +67,28 @@ const SidebarMenu = () => {
             </span>
             <span color="red"> Delete Account</span>
           </a>
+        </li>
+        <li>
+          <Link
+            to="/user/movie"
+            style={{
+              color: "#fff",
+              fontWeight: "bold",
+              textTransform: "uppercase",
+              borderBottom: "3px solid #ffc107",
+              background: "#333",
+            }}
+          >
+            Movies
+          </Link>
+        </li>
+        <li>
+          <Link to="/user/movie/upload-movie">
+            <span>
+              <MdUploadFile />
+            </span>
+            <span> Upload Movies</span>
+          </Link>
         </li>
       </ul>
     </div>

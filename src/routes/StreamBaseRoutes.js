@@ -10,7 +10,10 @@ import PasswordReset from "../components/authComponent/PasswordReset";
 import PhoneAuth from "../components/authComponent/PhoneAuth";
 import ProtectedRoute from "../helpers/ProtectedRoute";
 import UpdatePassword from "../components/profile/UpdatePassword";
-import AddMovie from "../components/movies/AddMovie";
+import Movies from "../components/movies/Movies";
+import UploadMovie from "../components/movies/UploadMovie";
+import MovieDetails from "../components/movies/MovieDetails";
+
 let StreamBaseRoutes = () => {
   let StreamRoutes = useRoutes([
     {
@@ -26,7 +29,7 @@ let StreamBaseRoutes = () => {
       element: <Signup />,
     },
     {
-      path: "myprofile",
+      path: "user",
       element: (
         <ProtectedRoute>
           <MyProfile />
@@ -45,8 +48,23 @@ let StreamBaseRoutes = () => {
           path: "update-password",
           element: <UpdatePassword />,
         },
+        {
+          path: "movie",
+          element: (
+            <ProtectedRoute>
+              <Movies />
+            </ProtectedRoute>
+          ),
+          children: [
+            {
+              path: "upload-movie",
+              element: <UploadMovie />,
+            },
+          ],
+        },
       ],
     },
+
     {
       path: "password-reset",
       element: <PasswordReset />,
@@ -56,10 +74,10 @@ let StreamBaseRoutes = () => {
       element: <PhoneAuth />,
     },
     {
-      path: "upload-movie",
+      path: ":movieName/:id",
       element: (
         <ProtectedRoute>
-          <AddMovie />
+          <MovieDetails />
         </ProtectedRoute>
       ),
     },

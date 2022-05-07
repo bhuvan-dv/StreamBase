@@ -60,19 +60,19 @@
   transition: ease-in(0.7s);
   color: #ffc107;
 }
-.asideIcon{
-width:150px;
-height: 150px;
-border-radius: 100%;
-overflow: hidden;
-position:relative;
-margin:0 auto;
-cursor: pointer;
+.asideIcon {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
 }
-.asideIcon main{
-  position:absolute;
+.asideIcon main {
+  position: absolute;
   background-color: #ffc107;
-  width:100%;
+  width: 100%;
   text-align: center;
   bottom: 0px;
   height: 36px;
@@ -83,12 +83,23 @@ cursor: pointer;
   cursor: pointer;
   transition: ease all 0.7s;
 }
-.asideIcon:hover main{
+.asideIcon:hover main {
   opacity: 1;
 }
-.asideIcon a{
-  color:#fff;
+.asideIcon a {
+  color: #fff;
+}
+.lastChild {
+  cursor: pointer;
+  bottom: 0;
+  position: fixed;
+  width: 259px;
+  left:0;
+  border:0;
+  color:red
 }
 .lastChild:hover{
-  background-color: red;
+  color:white
 }
+
+

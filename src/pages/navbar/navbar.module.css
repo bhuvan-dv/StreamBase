@@ -100,3 +100,19 @@ font-size: 16px;
 height:20px;
 width:24px;
 }
+.movieplus svg{
+  font-size: 25px;
+}
+.uploadLink{
+  padding:0px 12px 0 0px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+  /* background-color: #ffc107; */
+  color:#fff;
+  margin:0px 12px 0 0px;
+  border-radius: 4px;
+  padding: 4px 11px 4px 1px;
+  text-decoration: 1;
+}
+

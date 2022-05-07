@@ -5,7 +5,7 @@ const MainProfile = () => {
   let location = useLocation();
   return (
     <div>
-      {location.pathname === "/myprofile" ? <MyAccount /> : <Outlet />}
+      {location.pathname === "/user" ? <MyAccount /> : <Outlet />}
     </div>
   );
 };

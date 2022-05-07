@@ -6,6 +6,7 @@ import { AuthContext } from "../../api/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../api/firebase";
 import { toast } from "react-toastify";
+import { BsFillPatchPlusFill } from "react-icons/bs";
 const Menu = () => {
   let [toggle, setToggle] = useState(false);
   let USER = useContext(AuthContext);
@@ -36,13 +37,17 @@ const Menu = () => {
       <>
         <li style={{ padding: "0 5px" }}>
           <NavLink
-            to={{ pathname: "/upload-movie" }}
+            to={{ pathname: "/user/movie" }}
             className={Styles.navbarIconLink}
+            id="upload"
           >
-            <span style={{ padding: "0 10px" }}>upload movie</span>
+            <span className={Styles.movieplus}>
+              <BsFillPatchPlusFill />
+            </span>
+            <span style={{ padding: "0 4px" }}>movie</span>
           </NavLink>
         </li>
-        <li onClick={dropDownMenu}>
+        <li onClick={dropDownMenu} style={{ padding: "0 15px" }}>
           <NavLink
             to={{ pathname: "/" }}
             className={Styles.navbarIconLink}
@@ -65,7 +70,7 @@ const Menu = () => {
           >
             <ul>
               <li>
-                <NavLink to="/myprofile">
+                <NavLink to="/user">
                   <span>
                     <FaUser />
                   </span>
